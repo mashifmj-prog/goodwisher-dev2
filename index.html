@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoodWisher - Development Versions</title>
+    <title>GoodWisher - Create Beautiful Greeting Cards</title>
     <style>
         * {
             margin: 0;
@@ -72,9 +72,10 @@
         }
 
         .tagline {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             opacity: 0.9;
             margin-bottom: 0.5rem;
+            font-weight: 300;
         }
 
         .subtitle {
@@ -82,6 +83,30 @@
             opacity: 0.8;
             max-width: 600px;
             margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .welcome-message {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .welcome-message h2 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .welcome-message p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
 
         .versions-grid {
@@ -130,19 +155,19 @@
             letter-spacing: 0.5px;
         }
 
-        .version-badge.latest {
+        .version-badge.recommended {
             background: linear-gradient(45deg, var(--success), #20c997);
         }
 
-        .version-badge.phase3 {
+        .version-badge.advanced {
             background: linear-gradient(45deg, #8a2be2, #da70d6);
         }
 
-        .version-badge.phase2 {
+        .version-badge.enhanced {
             background: linear-gradient(45deg, var(--primary), var(--primary-light));
         }
 
-        .version-badge.phase1 {
+        .version-badge.basic {
             background: linear-gradient(45deg, var(--gray), #868e96);
         }
 
@@ -150,6 +175,12 @@
             font-size: 1.8rem;
             margin-bottom: 1rem;
             color: var(--dark);
+        }
+
+        .version-card p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
         }
 
         .version-features {
@@ -161,6 +192,7 @@
             padding: 0.5rem 0;
             padding-left: 1.8rem;
             position: relative;
+            color: var(--dark);
         }
 
         .version-features li::before {
@@ -190,6 +222,14 @@
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(74, 111, 165, 0.4);
+        }
+
+        .btn-recommended {
+            background: linear-gradient(45deg, var(--success), #20c997);
+        }
+
+        .btn-recommended:hover {
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
         }
 
         .btn-full {
@@ -245,6 +285,11 @@
             .header {
                 margin-bottom: 2rem;
             }
+            
+            .welcome-message {
+                padding: 1.5rem;
+                margin: 1rem auto;
+            }
         }
 
         @media (max-width: 480px) {
@@ -298,83 +343,88 @@
                 <span class="logo-icon">🎉</span>
                 <h1>GoodWisher</h1>
             </div>
-            <p class="tagline">Create Beautiful Greeting Cards</p>
-            <p class="subtitle">Choose from our development versions below to explore different stages of the GoodWisher application</p>
+            <p class="tagline">Create Beautiful Greeting Cards in Seconds</p>
+            <p class="subtitle">Perfect for birthdays, anniversaries, holidays, and special occasions</p>
         </header>
 
+        <div class="welcome-message">
+            <h2>Welcome to GoodWisher! 🎊</h2>
+            <p>Choose the version that works best for you. Whether you want AI-powered messages, beautiful templates, or a simple card creator, we've got you covered!</p>
+        </div>
+
         <div class="versions-grid">
-            <!-- Latest Version -->
+            <!-- Recommended Version -->
             <div class="version-card">
-                <span class="version-badge latest">Latest Version</span>
-                <h2>Complete Implementation</h2>
-                <p>Fully featured version with all phases integrated</p>
+                <span class="version-badge recommended">Recommended</span>
+                <h2>Complete Experience</h2>
+                <p>Our most powerful version with all features unlocked</p>
                 <ul class="version-features">
-                    <li>AI Message Generation & Enhancement</li>
-                    <li>Multiple Card Templates</li>
-                    <li>Advanced Sharing Features</li>
-                    <li>Mobile Responsive Design</li>
-                    <li>Enhanced User Experience</li>
-                    <li>Error Handling & Validation</li>
+                    <li>AI-powered message writing</li>
+                    <li>Beautiful card templates</li>
+                    <li>Easy sharing with friends</li>
+                    <li>Works on all devices</li>
+                    <li>Custom colors & themes</li>
+                    <li>Instant preview</li>
                 </ul>
-                <a href="v1.html" class="btn btn-full">
-                    <span>Launch Latest Version</span>
+                <a href="v1.html" class="btn btn-recommended btn-full">
+                    <span>Get Started Now</span>
                     🚀
                 </a>
             </div>
 
-            <!-- Phase 3 -->
+            <!-- Advanced Features -->
             <div class="version-card">
-                <span class="version-badge phase3">Phase 3</span>
-                <h2>AI Integration</h2>
-                <p>Smart message generation and enhancement</p>
+                <span class="version-badge advanced">AI Powered</span>
+                <h2>Smart Messages</h2>
+                <p>Let AI help you write the perfect greeting</p>
                 <ul class="version-features">
-                    <li>AI Message Assistant</li>
-                    <li>Smart Message Generation</li>
-                    <li>Style Customization</li>
-                    <li>Message Enhancement</li>
-                    <li>Multiple AI Options</li>
-                    <li>Simulated AI Experience</li>
+                    <li>AI message assistant</li>
+                    <li>Smart writing suggestions</li>
+                    <li>Multiple writing styles</li>
+                    <li>Message improvement</li>
+                    <li>Quick customization</li>
+                    <li>Creative ideas</li>
                 </ul>
                 <a href="v3.html" class="btn btn-full">
-                    <span>Open Phase 3</span>
+                    <span>Try AI Features</span>
                     ✨
                 </a>
             </div>
 
-            <!-- Phase 2 -->
+            <!-- Enhanced Version -->
             <div class="version-card">
-                <span class="version-badge phase2">Phase 2</span>
-                <h2>Templates & Sharing</h2>
-                <p>Enhanced with templates and sharing capabilities</p>
+                <span class="version-badge enhanced">Beautiful Designs</span>
+                <h2>Template Gallery</h2>
+                <p>Choose from stunning card designs</p>
                 <ul class="version-features">
-                    <li>8 Beautiful Card Templates</li>
-                    <li>Template Gallery</li>
-                    <li>Advanced Sharing Options</li>
-                    <li>Shareable Links</li>
-                    <li>Social Media Integration</li>
-                    <li>Improved User Interface</li>
+                    <li>8 beautiful templates</li>
+                    <li>Easy template browser</li>
+                    <li>Social media sharing</li>
+                    <li>Shareable links</li>
+                    <li>Multiple platforms</li>
+                    <li>Clean interface</li>
                 </ul>
                 <a href="v2.html" class="btn btn-full">
-                    <span>Open Phase 2</span>
+                    <span>Browse Templates</span>
                     🎨
                 </a>
             </div>
 
-            <!-- Phase 1 -->
+            <!-- Basic Version -->
             <div class="version-card">
-                <span class="version-badge phase1">Phase 1</span>
-                <h2>Foundation & UX</h2>
-                <p>Core functionality with mobile-first design</p>
+                <span class="version-badge basic">Simple & Easy</span>
+                <h2>Quick Creator</h2>
+                <p>Fast and straightforward card making</p>
                 <ul class="version-features">
-                    <li>Mobile Responsive Design</li>
-                    <li>Message Categories</li>
-                    <li>Card Customization</li>
-                    <li>Form Validation</li>
-                    <li>Toast Notifications</li>
-                    <li>Basic Card Preview</li>
+                    <li>Mobile-friendly design</li>
+                    <li>Message categories</li>
+                    <li>Custom colors</li>
+                    <li>Instant preview</li>
+                    <li>Easy to use</li>
+                    <li>No setup required</li>
                 </ul>
                 <a href="v1.html" class="btn btn-full">
-                    <span>Open Phase 1</span>
+                    <span>Create Simple Card</span>
                     📱
                 </a>
             </div>
@@ -383,11 +433,11 @@
         <footer class="footer">
             <div class="footer-links">
                 <a href="https://github.com/mashifmj-prog/goodwisher-dev2">GitHub Repository</a>
-                <a href="#">Documentation</a>
-                <a href="#">Report Issue</a>
-                <a href="#">Contact</a>
+                <a href="#">How to Use</a>
+                <a href="#">Send Feedback</a>
+                <a href="#">About Project</a>
             </div>
-            <p class="copyright">© 2025 GoodWisher. All development versions for demonstration purposes.</p>
+            <p class="copyright">© 2025 GoodWisher. Create and share beautiful greeting cards with ease!</p>
         </footer>
     </div>
 
@@ -454,4 +504,3 @@
     </script>
 </body>
 </html>
-
